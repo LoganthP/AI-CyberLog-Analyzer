@@ -1,17 +1,96 @@
-# 🛡️ CyberGuard — AI Log Analyzer & SIEM Dashboard
+# 🔐 AI CyberLog Analyzer --- CyberGuard SOC Dashboard
 
-> **Production-grade Blue-Team Log Analyzer** with real-time log streaming, AI anomaly detection, MITRE ATT&CK mapping, and a stunning cyber SOC dashboard.
 
-![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
-![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat-square&logo=sqlite)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+<p align="center">
+`<img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge" />`{=html}
+`<img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react" />`{=html}
+`<img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js" />`{=html}
+`<img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite" />`{=html}
+`<img src="https://img.shields.io/badge/UI-Cyber%20SOC%20Dashboard-purple?style=for-the-badge" />`{=html}
+</p>
 
----
+------------------------------------------------------------------------
 
-## 🏗️ System Architecture
+## 🛡️ Project Overview
 
-```
+**AI CyberLog Analyzer (CyberGuard)** is a futuristic SOC (Security
+Operations Center) style cybersecurity dashboard that analyzes log
+files, detects suspicious activities, and visualizes threats in
+real-time using an eye-catching cyber-themed interface.
+
+It is designed for: - 🔵 Blue Team Learning - 🛰️ SOC Dashboard
+Simulation - 📊 Log Intelligence & Threat Detection - 🔐 Cybersecurity
+Portfolio Projects
+
+The system supports multi-format log parsing, AI-driven insights, MITRE
+ATT&CK mapping, and real-time cyber threat visualization.
+
+------------------------------------------------------------------------
+
+# 🧠 Working of the System (Block Diagram)
+
+## 🔷 System Architecture Diagram
+
+                         ┌──────────────────────────┐
+                         │      User (SOC Analyst)  │
+                         │  Upload Logs / Live View │
+                         └─────────────┬────────────┘
+                                       │
+                                       ▼
+                         ┌──────────────────────────┐
+                         │     React Cyber UI       │
+                         │  (CyberGuard Dashboard)  │
+                         │  - Charts                │
+                         │  - Live Stream           │
+                         │  - MITRE Panel           │
+                         └─────────────┬────────────┘
+                                       │ REST API / WebSocket
+                                       ▼
+                         ┌──────────────────────────┐
+                         │    Node.js + Express     │
+                         │     Backend Server       │
+                         │  - API Routes            │
+                         │  - File Handling         │
+                         │  - Analysis Controller   │
+                         └─────────────┬────────────┘
+                                       │
+                 ┌─────────────────────┴─────────────────────┐
+                 ▼                                           ▼
+     ┌──────────────────────┐                 ┌────────────────────────┐
+     │   Log Parsing Engine │                 │  Real-Time Stream Engine│
+     │  - Pattern Matching  │                 │  (SIEM Style Feed)      │
+     │  - Regex Detection   │                 │  - Live Logs            │
+     │  - Event Extraction  │                 │  - Threat Updates       │
+     └─────────────┬────────┘                 └─────────────┬──────────┘
+                   │                                        │
+                   ▼                                        ▼
+        ┌──────────────────────────┐          ┌──────────────────────────┐
+        │  Threat Detection Engine │          │   AI Analysis Module     │
+        │  - Brute Force Logic     │          │  - Behavior Summary      │
+        │  - IP Anomaly Detection  │          │  - Risk Explanation      │
+        │  - Access Pattern Check  │          │  - Smart Insights        │
+        └─────────────┬────────────┘          └─────────────┬────────────┘
+                      │
+                      ▼
+            ┌──────────────────────────┐
+            │     SQLite Database      │
+            │  (Portable & Git Friendly)│
+            │  - Logs Storage          │
+            │  - Threat Records        │
+            │  - Analysis Sessions     │
+            └─────────────┬────────────┘
+                          │
+                          ▼
+            ┌──────────────────────────┐
+            │  Visualization Layer     │
+            │  - Severity Pie Chart    │
+            │  - Top IP Activity       │
+            │  - Threat Breakdown      │
+            │  - Recent Threat Table   │
+            └──────────────────────────┘
+
+
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    CYBERGUARD SIEM                       │
 ├──────────────────────┬──────────────────────────────────┤
@@ -39,86 +118,118 @@
 │                      │   └──────────────────────────┘   │
 └──────────────────────┴──────────────────────────────────┘
 ```
+------------------------------------------------------------------------
 
-## ✨ Features
+# ⚙️ Detailed System Workflow
 
-### Core Functionality
-- **📤 Smart Log Upload** — Drag & drop `.log`, `.txt`, `.json`, `.csv` files with preview
-- **📡 Real-Time Streaming** — WebSocket-based SIEM-style live log feed with terminal UI
-- **🧠 AI Anomaly Detection** — Rule + heuristic hybrid engine with natural-language summaries
-- **🛡️ MITRE ATT&CK Mapping** — Auto-map threats to framework techniques with visual badges
-- **📊 Interactive Analytics** — Recharts-powered dashboards with pie, bar, and line charts
+## 1️⃣ Log Input Layer
 
-### Detection Engine (Blue-Team Logic)
-| Threat Type | Description | MITRE ID |
-|---|---|---|
-| Brute Force Attack | >5 failed logins from same IP in 60s | T1110 |
-| DDoS Pattern | >100 requests/min from single IP | T1498 |
-| Exploit Attempt | SQL injection, XSS, path traversal | T1190 |
-| Reconnaissance | Directory/service scanning | T1046 |
-| Unauthorized Access | Repeated admin panel probing | T1133 |
-| Suspicious Tool | Known scanner user-agents (Nikto, sqlmap, Nmap) | T1595 |
-| Auth Failures | Clusters of 401/403 responses | T1078 |
+Users can upload logs in multiple formats: - `.log` - `.txt` - `.json` -
+`.csv` - Apache/Nginx access logs
 
-### UI/UX
-- 🌑 Futuristic cyber-dark theme (#0A0F1F)
-- ✨ Neon glow accents (cyan, purple, blue)
-- 🔲 Glassmorphism cards with backdrop blur
-- 🎬 Framer Motion animations throughout
-- 📟 Terminal-style live log viewer
-- 📱 Fully responsive design
+OR use live stream simulation for real-time SOC experience.
 
----
+------------------------------------------------------------------------
 
-## 🚀 Quick Start
+## 2️⃣ Frontend --- CyberGuard Dashboard
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm (comes with Node.js)
+Built using: - React + Vite - Tailwind CSS (Cyber Theme) - Recharts
+(Data Visualization) - Framer Motion (Animations)
 
-### Installation & Run
+Main Modules: - Dashboard (Threat Analytics) - Upload Logs Panel - Live
+Stream Viewer - AI Analysis Section - MITRE ATT&CK Mapping Panel -
+Recent Analysis Sessions
 
-```bash
-# 1. Clone the repository
-git clone <repo-url>
-cd cyber-log-analyzer
+------------------------------------------------------------------------
 
-# 2. Install all dependencies (root + server + client)
+## 3️⃣ Backend Processing (Node.js + Express)
+
+The backend handles: - Secure file uploads - REST API communication -
+Log analysis orchestration - Real-time data processing - Threat
+detection routing
+
+------------------------------------------------------------------------
+
+## 4️⃣ Log Parsing Engine (Core Intelligence)
+
+The parser extracts key attributes: - Timestamp - IP Address - Event
+Type - Status Codes - Users & Endpoints
+
+Detection Methods: - Regex pattern matching - Frequency analysis -
+Behavioral correlation - Event classification
+
+------------------------------------------------------------------------
+
+## 5️⃣ Threat Detection Engine (Blue-Team Logic)
+
+Detects: - 🔴 Brute Force Attacks (Multiple failed logins) - 🟠
+Credential Stuffing - 🟡 Unauthorized Access (401/403) - 🟣 DDoS
+Patterns (Request spikes) - 🔵 IP Anomalies - ⚠️ Privilege Escalation
+Attempts
+
+Example Rule: IF failed_logins_from_same_IP \> 5 within 60 seconds\
+→ Flag as Brute Force Attack (HIGH Severity)
+
+------------------------------------------------------------------------
+
+## 6️⃣ AI Analysis Module
+
+Provides intelligent insights: - Automated threat summaries - Risk
+scoring - Behavior explanation - Human-readable cyber analysis
+
+Example Output: "Possible brute force attack detected from IP
+185.243.44.12 with multiple failed login attempts within a short time
+window."
+
+------------------------------------------------------------------------
+
+## 7️⃣ Database Layer (SQLite --- Git Friendly)
+
+Why SQLite: - No external DB setup - Lightweight & portable -
+Auto-created on first run - Perfect for GitHub cloning - No MongoDB / No
+Supabase
+
+Stored Data: - Uploaded Logs - Threat Results - Analysis Sessions - IP
+Activity Metrics
+
+------------------------------------------------------------------------
+
+## 8️⃣ Visualization & SOC Dashboard Output
+
+Displayed Analytics: - Threat Severity Pie Chart - Top IP Activity
+Graph - Threat Breakdown Chart - Unique IP Counter - Logs Processed
+Counter - Recent Threat Table
+
+------------------------------------------------------------------------
+
+# 🔍 MITRE ATT&CK Mapping
+
+  Attack Type            MITRE ID   Description
+  ---------------------- ---------- ----------------------------
+  Brute Force            T1110      Credential Guessing
+  Unauthorized Access    T1078      Valid Accounts Abuse
+  DDoS Pattern           T1498      Network Denial of Service
+  Privilege Escalation   T1068      Exploitation for Privilege
+
+------------------------------------------------------------------------
+
+# 🚀 Installation (Clone & Run)
+
+``` bash
+git clone https://github.com/LoganthP/AI-CyberLog-Analyzer.git
+cd AI-CyberLog-Analyzer
 npm install
-
-# 3. Start both server and client
 npm run dev
 ```
 
-That's it! The app will open at:
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:3001
-- **WebSocket**: ws://localhost:3001/ws
+⚡ SQLite database auto-generates on first run (Zero configuration
+required)
 
-### Test with Sample Data
-A sample log file is included at `database/sample.log` — upload it through the dashboard to see threats detected immediately.
+------------------------------------------------------------------------
 
----
+# 📂 Project Structure
 
-## 🧱 Tech Stack
-
-| Layer | Technology | Purpose |
-|---|---|---|
-| Frontend | React 18 + Vite | Fast development & build |
-| Styling | Tailwind CSS | Utility-first cyber theme |
-| Animations | Framer Motion | Smooth micro-interactions |
-| Charts | Recharts | Interactive data visualization |
-| Icons | Lucide React | Consistent icon system |
-| Backend | Node.js + Express | REST API server |
-| Real-time | WebSocket (ws) | Live log streaming |
-| Database | SQLite (better-sqlite3) | Zero-config portable DB |
-| Security | Helmet + Rate Limiter | API hardening |
-
----
-
-## 📂 Project Structure
-
-```
+```text
 cyber-log-analyzer/
 ├── client/                    # React Frontend
 │   ├── src/
@@ -154,69 +265,44 @@ cyber-log-analyzer/
 └── README.md
 ```
 
----
+------------------------------------------------------------------------
 
-## 💾 Database (SQLite)
+# 🎨 UI/UX Highlights
 
-This project uses **SQLite** for maximum portability:
-- **Zero configuration** — no database server to install
-- **Single file** — `database/logs.db` is auto-created on first run
-- **Cross-platform** — works identically on Windows, macOS, and Linux
-- **Git-friendly** — `.db` file is gitignored; schema is version-controlled
+-   Futuristic Cyber SOC Theme
+-   Neon Glow Charts
+-   Glassmorphism Cards
+-   Animated Threat Indicators
+-   Terminal-style Log Viewer
+-   Responsive Dashboard Layout
+-   Smooth Micro-interactions
 
-### Tables
-- `analysis_sessions` — Upload/analysis metadata and AI summaries
-- `log_entries` — Parsed log lines with structured fields
-- `threats` — Detected threats with MITRE mappings
-- `mitre_techniques` — Reference MITRE ATT&CK data (auto-seeded)
+------------------------------------------------------------------------
 
----
+# 📘 Educational Value (Blue-Team Learning)
 
-## 🔐 Security & Performance
+This project helps you learn: - SOC Dashboard Engineering - Log Parsing
+Algorithms - Threat Intelligence Visualization - SIEM System
+Fundamentals - Blue-Team Detection Logic - Full-Stack Cybersecurity
+Development
 
-- **File validation** before upload (type + size)
-- **Rate limiting** on API endpoints (200 req/15min)
-- **Helmet** security headers
-- **CORS** configured for frontend origin
-- **WAL mode** SQLite for concurrent read performance
-- **Async-friendly** — non-blocking architecture
-- **Message buffering** — WebSocket limits to 500 most recent events
+------------------------------------------------------------------------
 
----
+# 🔐 Security & Performance
 
-## 🎓 Blue-Team Learning Outcomes
+-   Secure file validation
+-   Async log parsing (high performance)
+-   Large log file support
+-   Modular scalable architecture
+-   Robust error handling
 
-By studying this project, you'll learn:
+------------------------------------------------------------------------
 
-1. **Log Parsing** — How to normalize diverse log formats into structured data
-2. **Threat Detection** — Rule-based pattern matching for common attack vectors
-3. **MITRE ATT&CK** — Mapping real threats to industry-standard technique IDs
-4. **SIEM Concepts** — Real-time event streaming, correlation, and alerting
-5. **Risk Scoring** — Combining multiple signals into actionable risk assessments
-6. **IP Reputation** — Behavioral scoring of network entities
-7. **SOC Dashboard Design** — Building operator-friendly security interfaces
+# 🌟 Future Enhancements
 
----
-
-## 🔮 Future Enhancements
-
-- [ ] OpenAI/LLM integration for advanced threat summarization
-- [ ] Automated PCAP and Windows Event Log parsing
-- [ ] User authentication and role-based access control
-- [ ] Threat intelligence feed integration (AbuseIPDB, VirusTotal)
-- [ ] Alert notification system (email, Slack, webhook)
-- [ ] Log export (PDF reports, CSV)
-- [ ] Docker containerization
-- [ ] Custom detection rule editor
-
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
-
----
-
-<p align="center">
-  Built with 🛡️ by <strong>CyberGuard</strong> — Blue Team Intelligence Platform
-</p>
+-   Real-time WebSocket Log Streaming
+-   AI Threat Explanation (LLM Integration)
+-   PDF Threat Report Export
+-   Geo-IP Visualization Map
+-   Machine Learning Anomaly Detection
+-   Alert Notification System
