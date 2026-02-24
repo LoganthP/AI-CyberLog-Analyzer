@@ -1,5 +1,4 @@
-# 🔐 AI CyberLog Analyzer --- CyberGuard SOC Dashboard
-
+# 🔐 AI CyberLog Analyzer - CyberGuard SOC Dashboard
 
 <p align="center">
 `<img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge" />`{=html}
@@ -92,7 +91,7 @@ ATT&CK mapping, and real-time cyber threat visualization.
 
 ```text
 ┌─────────────────────────────────────────────────────────┐
-│                    CYBERGUARD SIEM                       │
+│                    CYBERGUARD SIEM                      │
 ├──────────────────────┬──────────────────────────────────┤
 │   React Dashboard    │         Node.js Backend          │
 │   (Vite + Tailwind)  │      (Express + WebSocket)       │
@@ -104,17 +103,17 @@ ATT&CK mapping, and real-time cyber threat visualization.
 │  │  AI Analysis  │   │   └──────────┬───────────────┘   │
 │  │  MITRE ATT&CK │   │              │                   │
 │  └───────────────┘   │   ┌──────────▼───────────────┐   │
-│                      │   │  Detection Engine         │   │
+│                      │   │  Detection Engine        │   │
 │  ┌───────────────┐   │   │  ├─ Brute Force          │   │
 │  │  WebSocket    │◄──┼──►│  ├─ DDoS Detection       │   │
 │  │  Client       │   │   │  ├─ Exploit Attempts     │   │
 │  └───────────────┘   │   │  ├─ Port Scanning        │   │
-│                      │   │  └─ AI Anomaly Analysis   │   │
+│                      │   │  └─ AI Anomaly Analysis  │   │
 ├──────────────────────┤   └──────────┬───────────────┘   │
 │                      │              │                   │
 │                      │   ┌──────────▼───────────────┐   │
-│                      │   │  SQLite Database          │   │
-│                      │   │  (database/logs.db)       │   │
+│                      │   │  SQLite Database         │   │
+│                      │   │  (database/logs.db)      │   │
 │                      │   └──────────────────────────┘   │
 └──────────────────────┴──────────────────────────────────┘
 ```
@@ -276,15 +275,6 @@ cyber-log-analyzer/
 -   Terminal-style Log Viewer
 -   Responsive Dashboard Layout
 -   Smooth Micro-interactions
-
-------------------------------------------------------------------------
-
-# 📘 Educational Value (Blue-Team Learning)
-
-This project helps you learn: - SOC Dashboard Engineering - Log Parsing
-Algorithms - Threat Intelligence Visualization - SIEM System
-Fundamentals - Blue-Team Detection Logic - Full-Stack Cybersecurity
-Development
 
 ------------------------------------------------------------------------
 
