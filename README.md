@@ -1,11 +1,11 @@
 # 🔐 AI CyberLog Analyzer - CyberGuard SOC Dashboard
 
 <p align="center">
-`<img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge"
-`<img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react"
-`<img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js"
-`<img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite"
-`<img src="https://img.shields.io/badge/UI-Cyber%20SOC%20Dashboard-purple?style=for-the-badge"
+  <img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js" />
+  <img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite" />
+  <img src="https://img.shields.io/badge/UI-Cyber%20SOC%20Dashboard-purple?style=for-the-badge" />
 </p>
 
 ------------------------------------------------------------------------
@@ -226,6 +226,36 @@ required)
 
 ------------------------------------------------------------------------
 
+## ✨ Features
+
+### Core Functionality
+- **📤 Smart Log Upload** — Drag & drop `.log`, `.txt`, `.json`, `.csv` files with preview
+- **📡 Real-Time Streaming** — WebSocket-based SIEM-style live log feed with terminal UI
+- **🧠 AI Anomaly Detection** — Rule + heuristic hybrid engine with natural-language summaries
+- **🛡️ MITRE ATT&CK Mapping** — Auto-map threats to framework techniques with visual badges
+- **📊 Interactive Analytics** — Recharts-powered dashboards with pie, bar, and line charts
+
+### Detection Engine (Blue-Team Logic)
+| Threat Type | Description | MITRE ID |
+|---|---|---|
+| Brute Force Attack | >5 failed logins from same IP in 60s | T1110 |
+| DDoS Pattern | >100 requests/min from single IP | T1498 |
+| Exploit Attempt | SQL injection, XSS, path traversal | T1190 |
+| Reconnaissance | Directory/service scanning | T1046 |
+| Unauthorized Access | Repeated admin panel probing | T1133 |
+| Suspicious Tool | Known scanner user-agents (Nikto, sqlmap, Nmap) | T1595 |
+| Auth Failures | Clusters of 401/403 responses | T1078 |
+
+### UI/UX
+- 🌑 Futuristic cyber-dark theme (#0A0F1F)
+- ✨ Neon glow accents (cyan, purple, blue)
+- 🔲 Glassmorphism cards with backdrop blur
+- 🎬 Framer Motion animations throughout
+- 📟 Terminal-style live log viewer
+- 📱 Fully responsive design
+
+------------------------------------------------------------------------
+
 # 📂 Project Structure
 
 ```text
@@ -266,15 +296,19 @@ cyber-log-analyzer/
 
 ------------------------------------------------------------------------
 
-# 🎨 UI/UX Highlights
+## 🧱 Tech Stack
 
--   Futuristic Cyber SOC Theme
--   Neon Glow Charts
--   Glassmorphism Cards
--   Animated Threat Indicators
--   Terminal-style Log Viewer
--   Responsive Dashboard Layout
--   Smooth Micro-interactions
+| Layer | Technology | Purpose |
+|---|---|---|
+| Frontend | React 18 + Vite | Fast development & build |
+| Styling | Tailwind CSS | Utility-first cyber theme |
+| Animations | Framer Motion | Smooth micro-interactions |
+| Charts | Recharts | Interactive data visualization |
+| Icons | Lucide React | Consistent icon system |
+| Backend | Node.js + Express | REST API server |
+| Real-time | WebSocket (ws) | Live log streaming |
+| Database | SQLite (better-sqlite3) | Zero-config portable DB |
+| Security | Helmet + Rate Limiter | API hardening |
 
 ------------------------------------------------------------------------
 
