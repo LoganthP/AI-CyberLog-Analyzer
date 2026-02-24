@@ -1,11 +1,11 @@
 # 🔐 AI CyberLog Analyzer - CyberGuard SOC Dashboard
 
 <p align="center">
-`<img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge" />`{=html}
-`<img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react" />`{=html}
-`<img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js" />`{=html}
-`<img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite" />`{=html}
-`<img src="https://img.shields.io/badge/UI-Cyber%20SOC%20Dashboard-purple?style=for-the-badge" />`{=html}
+`<img src="https://img.shields.io/badge/AI-Cyber%20Security-0A0F1F?style=for-the-badge"
+`<img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react"
+`<img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js"
+`<img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite"
+`<img src="https://img.shields.io/badge/UI-Cyber%20SOC%20Dashboard-purple?style=for-the-badge"
 </p>
 
 ------------------------------------------------------------------------
