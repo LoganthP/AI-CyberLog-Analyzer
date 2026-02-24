@@ -73,7 +73,7 @@ ATT&CK mapping, and real-time cyber threat visualization.
                       ▼
             ┌──────────────────────────┐
             │     SQLite Database      │
-            │  (Portable & Git Friendly)│
+            │ (Portable & Git Friendly)│
             │  - Logs Storage          │
             │  - Threat Records        │
             │  - Analysis Sessions     │
