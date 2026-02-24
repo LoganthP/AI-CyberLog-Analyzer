@@ -1,0 +1,8 @@
+node_modules/
+database/logs.db
+server/uploads/
+.env
+dist/
+.DS_Store
+*.log
+!database/sample.log
