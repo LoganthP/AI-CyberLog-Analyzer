@@ -182,7 +182,7 @@ window."
 
 ------------------------------------------------------------------------
 
-## 7️⃣ Database Layer (SQLite --- Git Friendly)
+## 7️⃣ Database Layer (SQLite)
 
 Why SQLite: - No external DB setup - Lightweight & portable -
 Auto-created on first run - Perfect for GitHub cloning - No MongoDB / No
