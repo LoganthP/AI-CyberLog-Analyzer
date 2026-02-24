@@ -203,12 +203,12 @@ Counter - Recent Threat Table
 
 # 🔍 MITRE ATT&CK Mapping
 
-  Attack Type            MITRE ID   Description
-  ---------------------- ---------- ----------------------------
-  Brute Force            T1110      Credential Guessing
-  Unauthorized Access    T1078      Valid Accounts Abuse
-  DDoS Pattern           T1498      Network Denial of Service
-  Privilege Escalation   T1068      Exploitation for Privilege
+| Attack Type           | MITRE ID | Description                     |
+|-----------------------|----------|---------------------------------|
+| Brute Force           | T1110    | Credential Guessing             |
+| Unauthorized Access   | T1078    | Valid Accounts Abuse            |
+| DDoS Pattern          | T1498    | Network Denial of Service       |
+| Privilege Escalation  | T1068    | Exploitation for Privilege      |
 
 ------------------------------------------------------------------------
 
