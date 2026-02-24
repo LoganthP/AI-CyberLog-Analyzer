@@ -1,0 +1,54 @@
+2026-02-24 08:00:01 INFO Login success | user=admin | ip=192.168.1.10 | status=200
+2026-02-24 08:00:12 INFO API request | endpoint=/api/data | ip=192.168.1.10 | status=200
+2026-02-24 08:01:03 WARNING Failed login | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 08:01:07 WARNING Failed login | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 08:01:10 WARNING Failed login | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 08:01:15 WARNING Failed login | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 08:01:18 WARNING Failed login | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 08:01:20 CRITICAL Brute force attack detected | ip=185.243.44.12 | attempts=6
+
+2026-02-24 08:02:05 INFO File access | file=/reports/data.csv | user=john | ip=10.0.0.5
+2026-02-24 08:02:15 INFO API request | endpoint=/api/users | ip=10.0.0.5 | status=200
+
+2026-02-24 08:03:01 ALERT Unauthorized admin access | endpoint=/admin | ip=203.0.113.77 | status=403
+2026-02-24 08:03:05 ALERT Unauthorized admin access | endpoint=/admin | ip=203.0.113.77 | status=403
+2026-02-24 08:03:08 HIGH Suspicious endpoint probing | ip=203.0.113.77 | endpoints=/admin,/config,/root
+
+2026-02-24 08:04:22 WARNING High frequency requests | ip=45.33.21.9 | requests=45 | status=429
+2026-02-24 08:04:24 WARNING High frequency requests | ip=45.33.21.9 | requests=52 | status=429
+2026-02-24 08:04:30 HIGH Possible DDoS pattern | ip=45.33.21.9 | spike=true
+
+2026-02-24 08:05:12 INFO Login success | user=alice | ip=192.168.1.22 | status=200
+2026-02-24 08:05:30 WARNING Failed login | user=alice | ip=91.234.55.201 | status=401
+2026-02-24 08:05:33 WARNING Failed login | user=alice | ip=91.234.55.201 | status=401
+2026-02-24 08:05:36 MEDIUM Credential stuffing suspected | ip=91.234.55.201
+
+2026-02-24 08:06:10 ERROR Server error | endpoint=/api/login | ip=172.16.0.2 | status=500
+2026-02-24 08:06:18 ERROR Server error | endpoint=/api/login | ip=172.16.0.2 | status=500
+2026-02-24 08:06:25 MEDIUM Backend anomaly detected | ip=172.16.0.2
+
+2026-02-24 08:07:02 INFO Login success | user=admin | ip=192.168.1.10 | status=200
+2026-02-24 08:07:15 WARNING Multiple IP login attempt | user=admin | ip=102.54.33.2
+2026-02-24 08:07:18 WARNING Multiple IP login attempt | user=admin | ip=77.88.99.11
+2026-02-24 08:07:22 HIGH Account takeover risk | user=admin
+
+2026-02-24 08:08:01 INFO API request | endpoint=/api/analytics | ip=192.168.1.30 | status=200
+2026-02-24 08:08:05 INFO API request | endpoint=/api/analytics | ip=192.168.1.30 | status=200
+2026-02-24 08:08:09 INFO API request | endpoint=/api/analytics | ip=192.168.1.30 | status=200
+
+2026-02-24 08:09:12 ALERT Suspicious geolocation IP | ip=203.45.77.90 | country=Unknown
+2026-02-24 08:09:18 MEDIUM Anomalous login location | user=root | ip=203.45.77.90
+
+2026-02-24 08:10:03 WARNING Failed login | user=root | ip=185.243.44.12 | status=401
+2026-02-24 08:10:06 WARNING Failed login | user=root | ip=185.243.44.12 | status=401
+2026-02-24 08:10:09 CRITICAL Repeated brute force escalation | ip=185.243.44.12
+
+2026-02-24 08:11:22 INFO File downloaded | file=/backup.zip | user=system | ip=10.0.0.5
+2026-02-24 08:12:01 LOW Normal traffic spike | ip=192.168.1.55 | requests=15
+2026-02-24 08:12:30 LOW Health check ping | service=auth | status=200
+
+2026-02-24 08:13:14 ALERT Privilege escalation attempt | user=guest | ip=66.249.66.1
+2026-02-24 08:13:20 HIGH Suspicious role modification | user=guest | action=admin_access
+
+2026-02-24 08:14:05 INFO Logout | user=alice | ip=192.168.1.22
+2026-02-24 08:14:40 INFO Logout | user=admin | ip=192.168.1.10

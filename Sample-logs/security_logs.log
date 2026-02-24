@@ -1,0 +1,20 @@
+2026-02-24 09:12:11 INFO User login successful | user=admin | ip=192.168.1.10 | status=200
+2026-02-24 09:12:45 WARNING Failed login attempt | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 09:12:47 WARNING Failed login attempt | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 09:12:50 WARNING Failed login attempt | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 09:12:53 WARNING Failed login attempt | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 09:12:56 WARNING Failed login attempt | user=admin | ip=185.243.44.12 | status=401
+2026-02-24 09:13:01 ALERT Possible brute force detected | ip=185.243.44.12
+2026-02-24 09:13:20 INFO File accessed | file=/secure/data.db | user=root | ip=10.0.0.5
+2026-02-24 09:14:02 ERROR Unauthorized access attempt | endpoint=/admin | ip=203.0.113.77 | status=403
+2026-02-24 09:14:25 INFO User logout | user=admin | ip=192.168.1.10
+2026-02-24 09:15:10 WARNING Suspicious repeated requests | ip=45.33.21.9 | count=120 | status=429
+2026-02-24 09:16:44 ERROR Server error | endpoint=/api/login | status=500 | ip=172.16.0.2
+2026-02-24 09:17:01 INFO User login successful | user=john | ip=192.168.1.22 | status=200
+2026-02-24 09:18:15 WARNING Failed login attempt | user=john | ip=91.234.55.201 | status=401
+2026-02-24 09:18:18 WARNING Failed login attempt | user=john | ip=91.234.55.201 | status=401
+2026-02-24 09:18:20 WARNING Failed login attempt | user=john | ip=91.234.55.201 | status=401
+2026-02-24 09:18:23 ALERT Credential stuffing suspected | ip=91.234.55.201
+2026-02-24 09:19:30 INFO API request | endpoint=/api/data | method=GET | ip=192.168.1.30 | status=200
+2026-02-24 09:20:12 WARNING Multiple IP access to same account | user=admin | ip=102.54.33.2
+2026-02-24 09:20:18 WARNING Multiple IP access to same account | user=admin | ip=77.88.99.11
